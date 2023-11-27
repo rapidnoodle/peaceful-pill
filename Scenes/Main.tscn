@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnnnrk62nc8vm"]
+[gd_scene load_steps=8 format=3 uid="uid://bnnnrk62nc8vm"]
 
-[ext_resource type="PackedScene" uid="uid://d18yjxxewwyf1" path="res://scenes/Player.tscn" id="1_5pb35"]
+[ext_resource type="PackedScene" uid="uid://d18yjxxewwyf1" path="res://Scenes/Player.tscn" id="1_5pb35"]
+[ext_resource type="PackedScene" uid="uid://cyu1m22644j4l" path="res://Scenes/Coin.tscn" id="2_v1squ"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_acpq0"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -30,9 +31,6 @@ environment = SubResource("Environment_jeran")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 4.08294, 8)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_er7rw")
 
@@ -44,3 +42,6 @@ shape = SubResource("ConcavePolygonShape3D_yr87k")
 [node name="Player" parent="." instance=ExtResource("1_5pb35")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 linear_damp = 3.0
+
+[node name="Coin" parent="." instance=ExtResource("2_v1squ")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 2)

@@ -1,3 +1,5 @@
-res://Scenes/Main.tscn
 res://Scripts/Player.gd
 res://scenes/Player.tscn
+res://Scenes/Main.tscn
+res://Scenes/Coin.tscn
+res://Scenes/Coin.gd
